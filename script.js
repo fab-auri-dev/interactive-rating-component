@@ -61,7 +61,7 @@ function showRatingText() {
         showRating.textContent = `You selected ${ JSON.parse( getsession ) } out of 5`;
 
         setTimeout( () => {
-            window.location.pathname = '/';
+            window.location.href = '/';
         }, 5000 ); 
     };
 
