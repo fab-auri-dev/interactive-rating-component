@@ -61,7 +61,11 @@ function showRatingText() {
         showRating.textContent = `You selected ${ JSON.parse( getsession ) } out of 5`;
 
         setTimeout( () => {
-            window.location.href = '/';
+            let position = window.location.href;
+            let splitted = position.split( '/' );
+            let spliced = splitted.splice( splitted.length - 1 );
+
+            window.location.href = splitted.join( '/' );
         }, 5000 ); 
     };
 
