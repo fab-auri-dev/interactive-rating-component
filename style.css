@@ -1,0 +1,165 @@
+:root {
+    /* Colors */
+    --orange: hsl( 25, 97%, 53% );
+    --white: hsl( 0, 0%, 100% );
+    --medium-grey: hsl( 216, 12%, 54% );
+    --dark-blue: hsl( 213, 19%, 18% );
+    --very-dark-blue: hsl( 216, 12%, 8% );
+
+    /* Typography */
+    --font-size: 0.938rem;
+    --font-family: 'Overpass';
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var( --very-dark-blue );
+    font-family: var( --font-family );
+}
+button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* Layout */
+
+.wrapper {
+    height: 100vh;
+    max-width: clamp( 25rem, 25%, 90% );
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.component {
+    padding: clamp( 1em, 2.5vw, 2em );
+
+    border-radius: 1rem;
+    background-color: var( --dark-blue );
+}
+
+/* Icon */
+
+.icon-container {
+    margin: 0 auto;
+}
+.icon-container svg:hover { 
+    background-color: var( --orange );
+}
+svg:hover path{ 
+    fill: var( --white );
+}
+.btn {
+    padding: 1em;
+    color: var( --medium-grey );
+
+    border-radius: 50%;
+    background-color: hsla( 216, 12%, 54%, .15 );
+}
+
+/* Text */
+
+.title {
+    margin-top: 1em;
+    margin-bottom: .5em;
+    
+    color: var( --white );
+}
+.text {
+    font-weight: 700;
+    color: var( --medium-grey );
+}
+.error {
+    margin-top: .5em;
+    margin-bottom: -1em;
+    font-weight: 700;
+    color: var( --orange );
+
+    display: none;
+}
+
+/* Rating */
+
+.rating-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 2em 0;
+}
+.rating-section .btn {
+    height: clamp( 2.5rem, 3.5vw, 3.5rem );
+    width: clamp( 2.5rem, 3.5vw, 3.5rem );
+
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0;
+}
+.rating-section .btn:hover {
+    color: var( --white );
+    background-color: var( --orange );
+}
+.active {
+    color: var( --white );
+    background-color: var( --medium-grey );
+}
+
+/* Submit */
+
+.submit {
+    width: 100%;
+    
+    padding: 1em;
+    color: var( --white );
+    background-color: var( --orange );
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: 550;
+}
+.submit:hover { 
+    color: var( --orange );
+    background-color: var( --white );
+}
+
+
+/* Thank You */
+
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
+.rating-result {
+    display: inline-block;
+    text-align: center;
+    padding: .5em 1em;
+
+    color: var( --orange );
+    background-color: hsla( 216, 12%, 54%, .15 );
+    border-radius: 2rem;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    text-align: center;
+
+    margin-bottom: .5em;
+}
