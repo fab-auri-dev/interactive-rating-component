@@ -39,13 +39,12 @@ function selectedRating() {
 selectedRating();
 
 
-function submitRating() {
+function submitRating( e ) {
     const getsession = sessionStorage.getItem( "selectedRating" );
 
     if ( ! getsession ) {
+        e.preventDefault();
         errorText.style.display = 'block';
-    } else {
-        window.location.pathname = '/thank-you.html';
     };
 };
 

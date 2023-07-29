@@ -29,6 +29,10 @@ button{
 	cursor: pointer;
 	outline: inherit;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Layout */
 
@@ -118,12 +122,13 @@ svg:hover path{
 /* Submit */
 
 .submit {
-    width: 100%;
+    display: block;
     
     padding: 1em;
     color: var( --white );
     background-color: var( --orange );
     border-radius: 2rem;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: .125rem;
     font-weight: 550;
