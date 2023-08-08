@@ -1,6 +1,6 @@
-if ( window.location.pathname == '/' ) {
+if ( window.location.href.split( '/' )[ window.location.href.split( '/' ).length - 1 ] != 'thank-you.html' ) {
     sessionStorage.clear();
-}
+};
 
 const showRating = document.getElementById( 'showRating' );
 const errorText = document.querySelector( '.error' );
